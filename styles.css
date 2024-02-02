@@ -68,4 +68,49 @@ h4 {
   height: 100%;
   align-items: flex-start;
   gap: 20px;
+  border-bottom: #750d37 1px solid;
+}
+
+#pets {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+#helping {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+#help-button {
+  background-color: #b3dec1;
+  color: #210124;
+}
+
+#help-button:hover {
+  background-color: #210124;
+  color: #b3dec1;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid black;
+}
+
+.img-container {
+  width: 200px;
+  height: 250px;
+  object-fit: fill;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
 }
