@@ -2,6 +2,7 @@ body {
   width: 100%;
 }
 
+/* header styles */
 #logo {
   width: 60px;
   height: 60px;
@@ -16,6 +17,7 @@ header {
   border-bottom: 1px solid black;
 }
 
+/* main styles */
 main {
   width: 100%;
   margin: 20px;
@@ -35,15 +37,44 @@ nav ul {
   padding: 15px;
   gap: 15px;
   background-color: #210124;
+  background-size: cover;
   color: #fefefe;
   padding: 20px;
   height: 400px;
+  opacity: 75;
+}
+
+.hero {
+  background-image: url(imgs/bkgd\ hero.jpg);
+  opacity: 0.75;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+
+#hero > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+label,
+input[type="text"] {
+  display: block;
+}
+
+input[type="submit"] {
+  padding: 5px;
 }
 
 #hero-header {
   font-size: 60px;
   text-align: center;
   color: #b3dec1;
+  text-shadow: 5px 5px 10px black;
 }
 p {
   font-family: Arial, Helvetica, sans-serif;
@@ -58,9 +89,32 @@ h4 {
   color: #750d37;
 }
 
+.about-us {
+  flex-direction: column;
+  display: flex;
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-content: start;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+section {
+  animation: slideIn 5s ease-in-out;
+}
+
 .dog {
-  width: 250px;
-  height: 450px;
+  width: 15vw;
   object-fit: scale-down;
 }
 
@@ -115,6 +169,7 @@ footer {
   border-top: 1px solid black;
 }
 
+/* gallery styles */
 #gallery {
   width: 100%;
   height: auto;
@@ -169,6 +224,7 @@ img {
   color: white;
 }
 
+/* dashboard styles */
 .resources a {
   color: white;
 }
@@ -193,7 +249,11 @@ img {
 .resources {
   background-color: #750d37;
   color: white;
-  width: 300px;
+  width: 50vw;
+}
+
+.dash-container {
+  display: flex;
 }
 
 .new-pets {
@@ -201,11 +261,12 @@ img {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  margin: 15px;
 }
 
 .pet {
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .pet > img {
@@ -217,10 +278,37 @@ img {
   border-radius: 10px;
 }
 
+.pet > img:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
 .brown-dog {
   object-position: 75%;
 }
 
 .pet-info {
   padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .dash-container {
+    flex-direction: column;
+  }
+  .new-pets {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: #210124 solid 1px;
+  }
+  .resources {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
